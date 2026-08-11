@@ -1,0 +1,88 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+.buildpath
+.externalToolBuilders/
+.eclipse/
+
+# Eclipse metadata
+.metadata/
+Servers/
+
+# Spring Tool Suite
+.springBeans
+.sts4-cache/
+.springBoot/
+
+# Maven
+target/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+.history/
+
+# Build
+build/
+dist/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Database local files
+*.db
+*.sqlite
+*.sqlite3
+
+# Upload/temp folders
+uploads/
+temp/
+tmp/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Test reports
+surefire-reports/
+failsafe-reports/

@@ -1,0 +1,195 @@
+:root {
+    --purple-primary: #6346f6;
+    --purple-gradient: linear-gradient(135deg, #6346f6 0%, #8b5cf6 100%);
+    --navy-footer: #0a1128;
+    --bg-faint-blue: #f4f6ff; /* Soft bluish background from reference UI */
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #2d3748;
+    background-color: #ffffff;
+    font-size: 0.95rem; /* Medium readable font size */
+}
+
+/* Typography */
+.section-title { font-size: 1.75rem; font-weight: 700; }
+.hero-title { font-size: 2.75rem; line-height: 1.25; }
+.hero-subtitle { font-size: 1.05rem; color: #4a5568; }
+
+.font-500 { font-weight: 500; }
+.font-600 { font-weight: 600; }
+
+/* Gradients & Colors */
+.text-purple-gradient {
+    background: var(--purple-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary-gradient {
+    background: var(--purple-gradient);
+    color: #ffffff !important;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(99, 70, 246, 0.35);
+}
+
+.text-purple { color: var(--purple-primary) !important; }
+.bg-purple { background-color: var(--purple-primary) !important; }
+.bg-navy { background-color: var(--navy-footer) !important; }
+.bg-faint-blue { background-color: var(--bg-faint-blue) !important; }
+
+/* Soft Icon Circles */
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.bg-primary-soft { background-color: #eef2ff; color: #4f46e5; }
+.bg-warning-soft { background-color: #fef3c7; color: #d97706; }
+.bg-purple-soft { background-color: #f3e8ff; color: #7c3aed; }
+.bg-success-soft { background-color: #d1fae5; color: #059669; }
+.bg-info-soft { background-color: #e0f2fe; color: #0284c7; }
+.bg-danger-soft { background-color: #ffe4e6; color: #e11d48; }
+
+/* 5 Column Grid for Popular Destinations */
+@media (min-width: 992px) {
+    .col-lg-2-4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+/* Navbar */
+.tagline { font-size: 0.68rem; margin-top: -2px; }
+.custom-nav-links .nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #4a5568;
+    padding-left: 1.1rem !important;
+    padding-right: 1.1rem !important;
+}
+.custom-nav-links .nav-link.active {
+    color: var(--purple-primary);
+    font-weight: 700;
+}
+
+/* HERO BANNER - Fixed Full View and Removed White Layer Overlay */
+.hero-section {
+    position: relative;
+    background: url('images/background.webp') center center / cover no-repeat;
+    min-height: 300vh;
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Floating Search Bar */
+.search-floating-card {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.search-floating-card .form-control,
+.search-floating-card .form-select {
+    font-size: 0.9rem;
+}
+
+/* Feature Cards */
+.feature-box {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.feature-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06) !important;
+}
+
+/* Destination Cards */
+.destination-card {
+    position: relative;
+    height: 260px;
+    transition: transform 0.3s ease;
+}
+.destination-card:hover {
+    transform: translateY(-4px);
+}
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.destination-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.85) 100%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rating-badge {
+    align-self: flex-end;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+/* Traveller Category Cards */
+.traveller-card {
+    transition: transform 0.25s ease;
+}
+.traveller-card:hover {
+    transform: translateY(-4px);
+}
+.traveller-card img {
+    height: 125px;
+    object-fit: cover;
+}
+.cursor-pointer { cursor: pointer; }
+
+/* STEP BUILDER SECTION WITH TRAVEL SYMBOL BACKGROUND PATTERN */
+.travel-doodle-bg {
+    background-color: #f4f6ff;
+    /* Clean Travel Doodle SVG pattern as seen in original design */
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%206346f6' fill-opacity='0.05'%3E%3Cpath d='M0 0h80v80H0z' fill='none'/%3E%3Cpath d='M10 20l5-5 5 5-2 2-3-3-3 3-2-2zm40 40l5-5 5 5-2 2-3-3-3 3-2-2zM25 60a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm30-40a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM15 35h10v10H15V35zm35 0h10v10H50V35z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.step-timeline {
+    position: relative;
+    z-index: 1;
+}
+
+.step-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Footer Styling */
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.88rem;
+    line-height: 2.1;
+    transition: color 0.2s ease;
+}
+.footer-links a:hover { color: #ffffff; }
